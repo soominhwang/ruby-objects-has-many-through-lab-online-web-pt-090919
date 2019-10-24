@@ -23,9 +23,7 @@ class Doctor
   end
 
   def patients
-    Appointment.select do |appointment|
-      appointments.map(&:patient)
-    end
+    appointments.map(&:patient)
   end
 
 end
