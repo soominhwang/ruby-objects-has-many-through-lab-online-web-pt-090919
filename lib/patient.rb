@@ -23,11 +23,5 @@ class Patient
   end
 
   def doctors
-    Appointment.all.select do |appointment|
-      appointment.patient==self
-    end.collect do |appointment|
-      appointment.doctor
-    end
-  end
-
+    appointments.map(&:date)
 end
