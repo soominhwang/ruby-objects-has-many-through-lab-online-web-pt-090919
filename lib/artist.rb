@@ -23,10 +23,10 @@ class Artist
   end
 
   def genres
-    Song.all.select do |song| 
+    Song.all.select do |song|
       song.artist == self
       end
-      .map do |song| 
+      .map do |song|
       song.genre
       end
   end
