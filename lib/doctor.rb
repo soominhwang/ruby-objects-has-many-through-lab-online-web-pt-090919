@@ -23,7 +23,6 @@ class Doctor
   end
 
   def patients
-    binding.pry
     Appointment.all.select do |appointment|
       appointment.doctor==self
     end.map(&:name) do |appointment|
