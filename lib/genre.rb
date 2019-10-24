@@ -1,3 +1,5 @@
+require 'pry'
+
 class Genre
   attr_accessor :name
 
@@ -13,12 +15,13 @@ class Genre
   end
 
   def songs
-    Song.all.select do |song|
+    binding.pry
+    Song.all.genre select do |song|
       song.genre==self
     end
   end
 
   def artists
-    
+
   end
 end
